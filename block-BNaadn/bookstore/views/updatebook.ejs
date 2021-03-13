@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <div class="fullcontent">
+      <div class="headings">
+        <h1>The Book Store</h1>
+      </div>
+      <div class="formbox">
+        <form id="form" action="/books/<%= book.id%>/edit" method="post">
+          <label for="">title</label>
+          <input
+            type="text"
+            name="title"
+            class="asd"
+            value="<%= book.title%>"
+          />
+          <label for="">summary</label>
+          <!-- <input type="text" id="" name="summary" class="asd" /> -->
+          <textarea name="summary" id="" cols="30" rows="10" class="asd">
+<%= book.summary%></textarea
+          >
+          <label for="">pages</label>
+          <input
+            type="text"
+            id=""
+            name="pages"
+            class="asd"
+            value="<%= book.pages%>"
+          />
+          <label for="">publication</label>
+          <input
+            type="text"
+            id=""
+            name="publication"
+            class="asd"
+            value="<%= book.publication%>"
+          />
+          <label for="">cover_image</label>
+          <input
+            type="text"
+            id=""
+            name="cover_image"
+            class="asd"
+            value="<%= book.cover_image%>"
+          />
+          <label for="">author</label>
+          <input
+            type="text"
+            id=""
+            name="author"
+            class="asd"
+            value="<%= book.author%>"
+          />
+          <input
+            id="btn"
+            type="submit"
+            name="submit"
+            value="update book"
+            class="mainbox"
+          />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
