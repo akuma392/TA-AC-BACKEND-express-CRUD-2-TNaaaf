@@ -5,8 +5,8 @@
   </head>
   <body>
     <header>
-      <a href=""> Home page </a>
-      <a href=""> BookStore </a>
+      <a href="/"> Home page </a>
+      <a href="/books"> BookStore </a>
     </header>
     <div class="fullcontent">
       <div class="headings">
@@ -22,10 +22,10 @@
           <span> <%= book.summary%> </span>
         </p>
         <p>Pages <span><%= book.pages%></span></p>
-        <p>publication: <span>Yash raj</span></p>
+        <p>publication: <span><%= book.publication%></span></p>
         <img src="<%= book.cover_image%>" alt="" />
         <p><span><%= book.category%></span></p>
-        <p>written by <span><%= book.author%></span></p>
+        <p>written by <span><%= book.author.name%></span></p>
         <div>
           <a href="/books/<%= book.id%>/edit">
             <button>edit</button>

@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+const { schema } = require('./book');
 
 var Schema = mongoose.Schema;
 
@@ -7,6 +8,7 @@ var authorSchema = new Schema(
     name: { type: String, required: true },
     email: String,
     country: String,
+    booksId: [{ type: Schema.Types.ObjectId, ref: 'Book' }],
   },
   { timestamps: true }
 );

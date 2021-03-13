@@ -13,8 +13,8 @@ var bookSchema = new Schema(
       default: `https://static-exp1.licdn.com/sc/h/3m4tgpbdz7gbldapvl63mrnxz`,
     },
     category: [String],
-    // author: { type: Schema.Types.ObjectId, ref: 'Author', required: true },
-    author: String,
+    author: { type: Schema.Types.ObjectId, ref: 'Author', required: true },
+    // author: String,
   },
   { timestamps: true }
 );

@@ -19,15 +19,15 @@
             <span> <%= book.summary%> </span>
           </p>
           <p>Pages <span><%= book.pages%></span></p>
-          <p>publication: <span>Yash raj</span></p>
+          <p>publication: <span><%= book.publication%></span></p>
           <img src="<%= book.cover_image%>" alt="" />
           <p><span><%= book.category%></span></p>
-          <p>written by <span><%= book.author%></span></p>
+          <p>written by <span><%= book.author.name%></span></p>
           <a href="/books/<%= book.id%>">
             <button>See more</button>
           </a>
           <% })%> <% } else {%>
-          <h2>No books available</h2>
+          <h2 class="no-books">No books available</h2>
         </li>
         <% }%>
       </ul>
