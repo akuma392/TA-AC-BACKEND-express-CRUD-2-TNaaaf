@@ -76,7 +76,7 @@ router.get('/:id/dislike', (req, res, next) => {
   let id = req.params.id;
   Article.findByIdAndUpdate(
     id,
-    { $dec: { likes: 1 } },
+    { $inc: { likes: -1 } },
     (err, updateArticle) => {
       if (err) next(err);
       res.redirect('/articles/' + id);
