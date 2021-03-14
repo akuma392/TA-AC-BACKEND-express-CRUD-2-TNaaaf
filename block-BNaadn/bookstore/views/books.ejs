@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <div class="fullcontent">
+      <div class="sort">
+        <a href="/name"> Sort by book name </a>
+        <a href="/author"> Sort by author name </a>
+        <a href="/category"> Sort by category </a>
+      </div>
+      <div class="headings">
+        <h1>The Book Store</h1>
+        <h2>
+          Welcome to the book store.Here you can Create your own book list
+        </h2>
+      </div>
+      <ul>
+        <%if(books.length) { %> <% books.forEach(book => { %>
+        <li>
+          <h5><%= book.title%></h5>
+          <p>
+            <span> <%= book.summary%> </span>
+          </p>
+          <p>Pages <span><%= book.pages%></span></p>
+          <p>publication: <span><%= book.publication%></span></p>
+          <img src="<%= book.cover_image%>" alt="" />
+          <p><span><%= book.category%></span></p>
+          <p>written by <span><%= book.author.name%></span></p>
+          <a href="/books/<%= book.id%>">
+            <button>See more</button>
+          </a>
+          <% })%> <% } else {%>
+          <h2 class="no-books">No books available</h2>
+        </li>
+        <% }%>
+      </ul>
+      <a href="/books/create">
+        <button>Add books</button>
+      </a>
+    </div>
+  </body>
+</html>

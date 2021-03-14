@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <!-- <header>
+      <a href="/"> Home page </a>
+      <a href="/books"> BookStore </a>
+    </header> -->
+    <div class="fullcontent">
+      <div id="event">
+        <a href="/books"> Go to books Lists </a>
+      </div>
+      <div class="headings">
+        <h1>The Book Store</h1>
+        <h2>
+          Welcome to the book store.Here you can Create your own book list
+        </h2>
+      </div>
+
+      <li class="root">
+        <h5><%= book.title%></h5>
+        <p>
+          <span> <%= book.summary%> </span>
+        </p>
+        <p>Pages <span><%= book.pages%></span></p>
+        <p>publication: <span><%= book.publication%></span></p>
+        <img src="<%= book.cover_image%>" alt="" />
+        <p><span><%= book.category%></span></p>
+        <p>written by <span><%= book.author.name%></span></p>
+        <div>
+          <a href="/books/<%= book.id%>/edit">
+            <button>edit</button>
+          </a>
+          <a href="/books/<%= book.id%>/delete">
+            <button>Delete</button>
+          </a>
+        </div>
+      </li>
+    </div>
+  </body>
+</html>

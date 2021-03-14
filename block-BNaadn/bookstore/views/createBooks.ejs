@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <div class="fullcontent">
+      <div class="headings">
+        <h1>The Book Store</h1>
+        <h2>
+          Welcome to the book store.Here you can Create your own book list
+        </h2>
+      </div>
+      <div class="formbox">
+        <form id="form" action="/books" method="post">
+          <label for="">title</label>
+          <input type="text" name="title" class="asd" />
+          <label for="">summary</label>
+          <!-- <input type="text" id="" name="summary" class="asd" /> -->
+          <textarea
+            name="summary"
+            id=""
+            cols="30"
+            rows="10"
+            class="asd"
+          ></textarea>
+          <label for="">pages</label>
+          <input type="text" id="" name="pages" class="asd" />
+          <label for="">publication</label>
+          <input type="text" id="" name="publication" class="asd" />
+          <label for="">category</label>
+          <input type="text" id="" name="category" class="asd" />
+          <label for="">cover_image</label>
+          <input type="text" id="" name="cover_image" class="asd" />
+          <label for="">author</label>
+          <input type="text" id="" name="author" class="asd" />
+          <input
+            id="btn"
+            type="submit"
+            name="submit"
+            value="Add book to list"
+            class="mainbox"
+          />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
