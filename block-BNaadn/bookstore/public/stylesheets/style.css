@@ -228,3 +228,30 @@ li h5 {
   justify-content: center;
   align-items: center;
 }
+
+.sort a {
+  color: rgb(236, 6, 6);
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  margin-right: 2rem;
+}
+.sort a:hover {
+  color: green;
+  text-decoration: underline;
+}
+#event {
+  display: flex;
+  justify-content: right;
+}
+#event a {
+  color: rgb(236, 6, 6);
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  margin-right: 2rem;
+}
+#event a:hover {
+  color: green;
+  text-decoration: underline;
+}
